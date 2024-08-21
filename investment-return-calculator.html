@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Return Calculator</title>
+    <link rel="stylesheet" href="Calculator_Styles.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <h1>Investment Return Calculator</h1>
+        <form id="investment-form" class="calculator-form">
+            <div class="form-group">
+                <label for="initial-investment">Initial Investment (₹):</label>
+                <input type="number" id="initial-investment" class="input-field" required>
+            </div>
+            <div class="form-group">
+                <label for="annual-return">Expected Annual Return Rate (%):</label>
+                <input type="number" id="annual-return" class="input-field" step="0.1" required>
+            </div>
+            <div class="form-group">
+                <label for="investment-period">Investment Period (years):</label>
+                <input type="number" id="investment-period" class="input-field" required>
+            </div>
+            <button type="submit" class="calculate-button">Calculate</button>
+        </form>
+        <div id="result" class="result-display"></div>
+    </div>
+    <script src="investment-return-calculator.js"></script>
+</body>
+</html>

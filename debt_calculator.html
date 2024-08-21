@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debt Payoff Calculator</title>
+    <link rel="stylesheet" href="Calculator_Styles.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <h1>Debt Payoff Calculator</h1>
+        <form id="debt-form" class="calculator-form">
+            <div class="form-group">
+                <label for="current-debt">Current Debt (₹):</label>
+                <input type="number" id="current-debt" class="input-field" required>
+            </div>
+            <div class="form-group">
+                <label for="interest-rate">Interest Rate (%):</label>
+                <input type="number" id="interest-rate" class="input-field" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="monthly-payment">Monthly Payment (₹):</label>
+                <input type="number" id="monthly-payment" class="input-field" required>
+            </div>
+            <button type="button" class="calculate-button" onclick="calculateDebtPayoff()">Calculate</button>
+        </form>
+        <div id="result" class="result-display"></div>
+        <a href="index.html" class="back-link">Go Back</a>
+    </div>
+    <script src="debt_calculator.js"></script>
+</body>
+</html>

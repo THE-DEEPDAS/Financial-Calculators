@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retirement Savings Calculator</title>
+    <link rel="stylesheet" href="Calculator_Styles.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <h1>Retirement Savings Calculator</h1>
+        <form id="retirement-form" class="calculator-form">
+            <div class="form-group">
+                <label for="current-age">Current Age:</label>
+                <input type="number" id="current-age" class="input-field" required>
+            </div>
+            <div class="form-group">
+                <label for="retirement-age">Retirement Age:</label>
+                <input type="number" id="retirement-age" class="input-field" required>
+            </div>
+            <div class="form-group">
+                <label for="current-savings">Current Savings (₹):</label>
+                <input type="number" id="current-savings" class="input-field" required>
+            </div>
+            <div class="form-group">
+                <label for="monthly-contribution">Monthly Contribution (₹):</label>
+                <input type="number" id="monthly-contribution" class="input-field" required>
+            </div>
+            <div class="form-group">
+                <label for="inflation-rate">Expected Inflation Rate (%):</label>
+                <input type="number" id="inflation-rate" class="input-field" step="0.1" required>
+            </div>
+            <div class="form-group">
+                <label for="life-expectancy">Life Expectancy:</label>
+                <input type="number" id="life-expectancy" class="input-field" required>
+            </div>
+            <button type="submit" class="calculate-button">Calculate</button>
+        </form>
+        <div id="result" class="result-display"></div>
+    </div>
+    <script src="retirement-savings-calculator.js"></script>
+</body>
+</html>

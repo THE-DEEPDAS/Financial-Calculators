@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Loan Calculator</title>
+    <link rel="stylesheet" href="Calculator_Styles.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <h1>Auto Loan Calculator</h1>
+        <form id="auto-loan-form" class="calculator-form">
+            <div class="form-group">
+                <label for="car-price">Car Price (₹):</label>
+                <input type="number" id="car-price" class="input-field" required>
+            </div>
+            <div class="form-group">
+                <label for="down-payment">Down Payment (₹):</label>
+                <input type="number" id="down-payment" class="input-field" required>
+            </div>
+            <div class="form-group">
+                <label for="loan-term">Loan Term (years):</label>
+                <input type="number" id="loan-term" class="input-field" required>
+            </div>
+            <div class="form-group">
+                <label for="interest-rate">Interest Rate (%):</label>
+                <input type="number" id="interest-rate" class="input-field" step="0.1" required>
+            </div>
+            <button type="submit" class="calculate-button">Calculate</button>
+        </form>
+        <div id="result" class="result-display"></div>
+    </div>
+    <script src="auto-loan-calculator.js"></script>
+</body>
+</html>

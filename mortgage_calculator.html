@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortgage Affordability Calculator</title>
+    <link rel="stylesheet" href="Calculator_Styles.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <h1>Mortgage Affordability Calculator</h1>
+        <form id="mortgage-form" class="calculator-form">
+            <div class="form-group">
+                <label for="income">Annual Income (₹):</label>
+                <input type="number" id="income" class="input-field" required>
+            </div>
+            <div class="form-group">
+                <label for="expenses">Monthly Expenses (₹):</label>
+                <input type="number" id="expenses" class="input-field" required>
+            </div>
+            <div class="form-group">
+                <label for="down-payment">Down Payment (₹):</label>
+                <input type="number" id="down-payment" class="input-field" required>
+            </div>
+            <div class="form-group">
+                <label for="interest-rate">Interest Rate (%):</label>
+                <input type="number" id="interest-rate" class="input-field" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="loan-term">Loan Term (years):</label>
+                <input type="number" id="loan-term" class="input-field" required>
+            </div>
+            <button type="button" class="calculate-button" onclick="calculateMortgage()">Calculate</button>
+        </form>
+        <div id="result" class="result-display"></div>
+        <a href="index.html" class="back-link">Go Back</a>
+    </div>
+    <script src="mortgage_calculator.js"></script>
+</body>
+</html>
