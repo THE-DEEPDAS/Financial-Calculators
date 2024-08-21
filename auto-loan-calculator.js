@@ -6,6 +6,12 @@ document.getElementById('auto-loan-form').addEventListener('submit', function(e)
     const loanTerm = parseFloat(document.getElementById('loan-term').value) * 12;
     const interestRate = parseFloat(document.getElementById('interest-rate').value) / 100 / 12;
 
+    if (isNaN(carPrice) || isNaN(downPayment) || isNaN(loanTerm) || isNaN(interestRate) || 
+        carPrice <= 0 || downPayment < 0 || loanTerm <= 0 || interestRate < 0) {
+        document.getElementById('result').innerText = 'Please enter valid positive numbers for all fields.';
+        return;
+    }
+
     const loanAmount = carPrice - downPayment;
     const monthlyPayment = (loanAmount * interestRate) / (1 - Math.pow(1 + interestRate, -loanTerm));
 
