@@ -101,17 +101,8 @@ h1 {
   display: block;
 }
 
+/* Only make changes for screens below 1024px */
 @media (max-width: 1024px) {
-  .calculator-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
-  }
-
   .calculator-grid {
     grid-template-columns: 1fr;
   }
@@ -126,5 +117,56 @@ h1 {
 
   .calculator-card p {
     font-size: 1rem;
+  }
+}
+
+/* Specific adjustments for tablets and mobile devices */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .calculator-card {
+    padding: 20px;
+    height: auto;
+  }
+
+  .calculator-card h2 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+
+  .calculator-card p {
+    font-size: 0.9rem;
+    position: static;
+    transform: none;
+    text-align: center;
+  }
+
+  .calculator-card .wave {
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+
+  .calculator-card {
+    padding: 15px;
+  }
+
+  .calculator-card h2 {
+    font-size: 1.2rem;
+  }
+
+  .calculator-card p {
+    font-size: 0.8rem;
+  }
+
+  .calculator-card .wave {
+    height: 30px;
   }
 }
