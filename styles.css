@@ -5,7 +5,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: linear-gradient(135deg, rgba(17, 17, 37, 0.8) 0%, rgba(39, 39, 69, 0.8) 100%), url('https://static.vecteezy.com/system/resources/previews/007/278/150/non_2x/dark-background-abstract-with-light-effect-vector.jpg') no-repeat center center fixed;
+  background:  url('https://img.freepik.com/free-vector/black-faded-gradient-background-vector-with-blue-border_53876-125750.jpg') no-repeat center center fixed;
   background-size: cover;
   color: #fff;
   min-height: 100vh;
@@ -27,8 +27,15 @@ body {
 h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #61dafb;
+  color: #dde3e5;
   text-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  font-size: 3rem;
+            font-weight: bold;
+            background: linear-gradient(to right, #0d90c8, #a9e3e7,#fcfcfc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
 }
 
 .calculator-grid {

@@ -1,0 +1,140 @@
+/* Navbar Styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.navbar-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    padding-left: 3.%;
+    color: #bac0c2;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li {
+    margin-left: 20px;
+}
+
+.navbar-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-menu a:hover {
+    color: #61dafb;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    min-width: 150px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.dropdown-content a:hover {
+    background: #496067;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Hamburger Menu for Small Screens */
+.navbar-hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    
+}
+
+.navbar-hamburger span {
+    background: #fff;
+    width: 25px;
+    height: 3px;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+    
+}
+
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        width: 100%;
+        max-width: 200px;
+        padding: 10px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+    }
+
+    .navbar-menu li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .navbar-hamburger {
+        display: flex;
+    }
+
+    .navbar-hamburger.active span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .navbar-hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .navbar-hamburger.active span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .navbar-menu.show {
+        display: flex;
+    }
+}
